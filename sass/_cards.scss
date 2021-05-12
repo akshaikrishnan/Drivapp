@@ -1,0 +1,73 @@
+.trip-km {
+	position: fixed;
+	transform: translateY(-200%);
+	padding-bottom: 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 900;
+    font-size:$font-h1-size ;
+	transition: $globalTransitions;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9999;
+	line-height: 100px;
+    background-color: #8CC152;
+    color: #FFFFFF;
+}
+.trip-km-active {
+    transform: translateY(0%);
+}
+
+
+.bottom-sheet {
+  height: 90vh;
+  z-index: 35;
+  width: 100vw;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0px !important;
+  -webkit-box-shadow: -2px -15px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -15px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -2px -15px 5px 0px rgba(0,0,0,0.75);
+transition: all 600ms ease;
+  .capsule {
+    width: 25px;
+    height: 5px;
+    border-radius: 30%;
+    background-color: rgb(226, 226, 226);
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+.half-screen {
+    transform: translateY(50%);
+    pointer-events: unset;
+    visibility: visible;
+    overflow: scroll;
+    transition: all 700ms ease;
+}
+
+.hide-card {
+    transform: translateY(110%);
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 400ms ease;
+}
+
+
+.end-trip {
+    position: relative;
+	bottom: 0px; 
+	left: 0px;
+	right: 0px;
+	z-index: 77; 
+    transform: translateY(-60%);
+    transition: all 600ms ease;
+    padding: $globalMargin;
+}
+.end-trip-hidden {
+    transform: translateY(200%);
+    transition: all 600ms ease;
+}

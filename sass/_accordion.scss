@@ -1,0 +1,73 @@
+/*Accordion Settings*/
+.accordion-item {
+  border-left: 0px solid rgb(255, 255, 255);
+  border-right: 0px solid rgb(255, 255, 255);
+
+  .btn {
+    &:first-child {
+      width: 100%;
+    }
+  }
+  .card {
+    transition: all 0ms ease !important;
+  }
+  button {
+    transition: all 0ms ease !important;
+  }
+  [data-card-height] {
+    button {
+      width: 100%;
+    }
+  }
+}
+.btn.accordion-btn {
+  text-align: left !important;
+  padding: 15px 17px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.accordion-icon {
+  float: right;
+  transition: all 250ms ease;
+  margin-top: 5px;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $color_white;
+  color: $color_black;
+  outline: 0;
+}
+.accordion-button:not(.collapsed) ~ .accordion-item {
+  border-bottom: 0px solid rgb(255, 255, 255);
+}
+
+ul {
+  list-style: none; 
+}
+li {
+  position: relative;
+  padding: 10px;
+}
+
+li:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid $theme-dark-text;
+  background-color: $color_white;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-40%);
+  z-index: 5;
+}
+
+li:not(:last-child):after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: $theme-dark-text;
+  position: absolute;
+  left: -8px;
+  top: 50%;
+}

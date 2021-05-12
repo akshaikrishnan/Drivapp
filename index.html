@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drivapp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1 class="m-4">
+      Welcome back, <br />
+      Micheal
+    </h1>
+    <img
+      src="img/download.png"
+      data-bs-toggle="modal"
+      data-bs-target="#profile"
+      class="avatar img-circle"
+    />
+    <div class="trip-km">0.00 km</div>
+
+    <div class="map-full card card-style mb-0">
+      <iframe
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=kakkanad+(Pickup%20location)&amp;t=p&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      ></iframe>
+    </div>
+    <div class="end-trip end-trip-hidden">
+      <a
+        href="#"
+        class="btn btn-xxl btn-full mb-5 rounded-0 text-uppercase font-900 shadow-s btn-danger"
+        >End Trip</a
+      >
+    </div>
+
+    <!-- Bottom sheet -->
+
+    <div id="uptrip" class="card shadow-lg hide-card card-style bottom-sheet">
+      <span class="capsule"></span>
+      <div class="card-body">
+        <h4 class="text-center mb-3">Upcoming Trips</h4>
+
+        <div class="accordion" id="accordionTrip">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <div class="trip-title">
+                  <h5>Rajakkad jn.</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-m btn-full mb-3 rounded-0 text-uppercase font-900 shadow-s btn-success"
+                  >Start Trip</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="true"
+                aria-controls="collapseTwo"
+              >
+                <div class="trip-title">
+                  <h5>Rajakkad jn.</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-m btn-full mb-3 rounded-0 text-uppercase font-900 shadow-s btn-success"
+                  >Start Trip</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                <div class="trip-title">
+                  <h5>Rajakkad jn.</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <a
+                  href="#"
+                  class="btn btn-m btn-full mb-3 rounded-0 text-uppercase font-900 shadow-s btn-success"
+                  >Start Trip</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end Bottom sheet -->
+
+    <!-- history sheet -->
+
+    <div id="history" class="card shadow-lg hide-card card-style bottom-sheet">
+      <span class="capsule"></span>
+      <div class="card-body">
+        <h4 class="text-center mb-3">Previous Trips</h4>
+
+        <div class="accordion" id="accordionTrip">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsefour"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <div class="trip-title">
+                  <h5>Kizhakkekkotta</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapsefour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                  <h4>18 km</h4>
+                  <h3>₹396.75</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseiv"
+                aria-expanded="true"
+                aria-controls="collapseiv"
+              >
+                <div class="trip-title">
+                  <h5>Rajakkad jn.</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapseiv"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                  <h4>18 km</h4>
+                  <h3>₹396.75</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                <div class="trip-title">
+                  <h5>Rajakkad jn.</h5>
+                  <span class="mb0 p0">10:15 am</span>
+                </div>
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionTrip"
+            >
+              <div class="accordion-body">
+                <ul>
+                  <li>Eroor Rd, Eroor South, Eroor, Ernakulam</li>
+                  <li>Vennala High School Rd, Arakkakadavu</li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                  <h4>18 km</h4>
+                  <h3>₹396.75</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end history sheet -->
+
+    <!-- earnings sheet -->
+
+    <div id="earnings" class="card shadow-lg hide-card card-style bottom-sheet">
+      <span class="capsule"></span>
+      <div class="card-body">
+        <h4 class="text-center mb-3">Your Earnings</h4>
+
+        <div class="card card-style">
+          <div class="content">
+            <h5 class="text-center">Total Km Comparison</h5>
+            <p class="text-center mt-n2 mb-2 font-11 color-highlight">
+              Your perfomances v/s others in past week
+            </p>
+            <div class="chart-container" style="width: 100%; height: 350px">
+              <canvas class="chart" id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end earnings sheet -->
+
+    <!-- footer menu -->
+
+    <div id="footer-bar" class="footer-bar-1 ml-3 mr-3 rounded-s">
+      <a href="#" onClick="btmpnl('div#uptrip')"
+        ><i class="ri-steering-fill"></i><span>Upcoming</span></a
+      >
+      <a href="#" onClick="btmpnl('div#history')"
+        ><i class="ri-history-line"></i><span>Previous</span></a
+      >
+      <a href="#" onClick="btmpnl('div#earnings')" class="active-nav"
+        ><i class="ri-line-chart-line"></i><span>Earnings</span></a
+      >
+      <a href="#" onClick="messages()"
+        ><i class="ri-chat-3-line"></i><span>Messages</span></a
+      >
+    </div>
+
+    <div class="messages-wrap card"> Please enable live server to view this content</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="fullscreenreq" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="fullscreenreqLabel">
+              Request for fullscreen
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            This app is best viewed in full screen mode.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              onclick="openFullscreen()"
+              class="btn btn-success"
+            >
+              Enable Fullscreen
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="profile" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title align-self-center" >My Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card card-style">
+              <div class="content">
+                <div class="d-flex">
+                  <div>
+                    <img src="img/download.png" width="50" class="mr-3" />
+                  </div>
+                  <div class="ms-3">
+                    <h1 class="mb-0 pt-1">Micheal Philips</h1>
+                    <p class="color-highlight font-11 mt-n2 mb-3">
+                      Sedan Driver
+                    </p>
+                  </div>
+                </div>
+
+                  <div class="row mt-3 pt-1">
+                    <div class="col-6">
+                      <i class="float-left me-3 ri-phone-fill ri-xl"></i>
+                      <h4
+                      class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                    >
+                     Phone Number
+                    </h4>
+                    </div>
+                    <div class="col-6">
+                      <h4
+                      class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                    >
+                     +91 999 123 45 67
+                    </h4>
+                      </div>
+                      </div>
+                      <div class="row mt-3 pt-1">
+                        <div class="col-6">
+                          <i class="float-left me-3 ri-mail-line ri-xl"></i>
+                          <h4
+                          class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                        >
+                         Email Address
+                        </h4>
+                        </div>
+                        <div class="col-6">
+                          <h4
+                          class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                        >
+                         labscenario@gmail.com
+                        </h4>
+                          </div>
+                          </div>
+                      </div>
+                <a
+                  href="#"
+                  class="btn btn-m btn-full mb-3 rounded-0 text-uppercase font-900 shadow-s btn-dark"
+                  >Edit Profile</a
+                >
+              </div>
+            </div>
+            <div class="card card-style ml-0 mr-0 bg-white">
+              <div class="row mt-3 pt-1 mb-3">
+                <div class="col-6">
+                  <i class="float-left mx-3 ri-steering-fill ri-3x"></i>
+                  <h4
+                    class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                  >
+                    20,0017 <br />Kilometers
+                  </h4>
+                </div>
+                <div class="col-6">
+                  <i class="float-left mx-3 ri-star-line ri-3x"></i>
+                  <h4
+                    class="color-black float-left font-14 font-500 line-height-s pb-3 mb-3"
+                  >
+                    4.8<br />Rating
+                  </h4>
+                </div>
+                <div class="col-6">
+                  <i class="float-left mx-3 ri-funds-line ri-3x"></i>
+                  <h4
+                    class="color-black float-left font-14 font-500 line-height-s"
+                  >
+                    ₹ 30,175.25<br />Total Revenue
+                  </h4>
+                </div>
+                <div class="col-6">
+                  <i class="float-left mx-3 ri-chat-smile-2-line ri-3x"></i>
+                  <h4
+                    class="color-black float-left font-14 font-500 line-height-s"
+                  >
+                    545<br />Reviews
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <a
+                  href="login.html"
+                  class="btn btn-m btn-full mb-3 rounded-0 text-uppercase font-900 shadow-s btn-danger"
+                  >Logout</a
+                >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </body>
+</html>

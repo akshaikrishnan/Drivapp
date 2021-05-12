@@ -1,0 +1,52 @@
+@import "variables";
+@import "footer-bar";
+@import "structure";
+@import "typography";
+@import "utilities";
+@import "cards";
+@import "accordion";
+@import "buttons";
+@import "messages";
+@import "login";
+
+
+body{
+  overflow: hidden;
+}
+
+.map-full {
+  position: relative;
+  overflow: hidden;
+}
+
+.map-full iframe {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  z-index: 1;
+}
+.card-style {
+	overflow: hidden;
+	margin: 20px 0px $globalMargin 0px;
+	border-radius: $rounded-card-style;
+	border: none;
+	box-shadow: $globalShadow;
+	.card-body {
+		padding: 15px;
+	}
+}
+
+.img-circle {
+border-radius: 50%;
+}
+.avatar {
+    height: 50px;
+    width: 50px;
+    right: 10px;
+    top: 20px;
+    position: absolute;
+}
+.main-cont {
+  height: 100vh !important;
+  overflow:hidden !important;
+}

@@ -1,0 +1,155 @@
+.messages-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 300;
+  transform: translateY(200%);
+  transition: all 300ms ease;
+  opacity: 0%;
+}
+.chatbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  transform: translatex(200%);
+  transition: transform 300ms ease;
+  opacity: 0%;
+
+}
+.none{
+  display: none;
+}
+.show-messages {
+  transform: translateY(0%);
+  transition: all 300ms ease;
+  opacity: 100%;
+}
+.chat-active {
+  transform: translateX(0%);
+  transition: all 300ms ease;
+  opacity: 100%;
+}
+.user {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+}
+.us-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+
+.chat_area {
+  float: left;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+}
+.chat_area li {
+  padding: 14px 14px 0;
+}
+.chat_area li .chat-img1 img {
+  height: 40px;
+  width: 40px;
+}
+.chat_area .chat-body1 {
+  margin-left: 50px;
+}
+.chat-body1 p {
+  background: #4AACAC none repeat scroll 0 0;
+  color: #fff;
+  padding: 10px;
+}
+.chat_area .admin_chat .chat-body1 {
+  margin-left: 0;
+  margin-right: 50px;
+}
+.chat_area .admin_chat .chat-body1 p {
+
+  background: #fff;
+  color:#000
+ 
+}
+.chat_area li:last-child {
+  padding-bottom: 10px;
+}
+
+.reply {
+  height: 60px;
+  width: 100%;
+  background-color: #f5f1ee;
+  padding: 10px 5px 10px 5px !important;
+  margin-bottom: 15px !important;
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.reply-emojis {
+  padding: 5px !important;
+}
+
+.reply-emojis i {
+  text-align: center;
+  padding: 5px 5px 5px 5px !important;
+  color: #93918f;
+  cursor: pointer;
+}
+
+.reply-recording {
+  padding: 5px !important;
+}
+
+.reply-recording i {
+  text-align: center;
+  padding: 5px !important;
+  color: #93918f;
+  cursor: pointer;
+}
+
+.reply-send {
+  padding: 5px !important;
+}
+
+.reply-send i {
+  text-align: center;
+  padding: 5px !important;
+  color: #93918f;
+  cursor: pointer;
+}
+
+.reply-main {
+  padding: 2px 5px !important;
+}
+
+.reply-main textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  padding: 5px !important;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+  height: 100%;
+  font-size: 16px;
+}
+
+.reply-main textarea:focus {
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  box-shadow: none;
+}
